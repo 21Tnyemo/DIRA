@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sw">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dira – Crop price advisory for Tanzanian farmers</title>
+<title>Dira – Bei za mazao na ushauri kwa wakulima / Crop price advisory</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#1d6b4a">
 <style>
-:root{--bg:#f4f7ef;--surf:#fff;--ink:#14261c;--mut:#5b6b60;--line:#dbe3d6;--grn:#1d6b4a;--grn2:#e3f1e8;--gold:#e0a100;--gold2:#fbf0cc;--red:#b4432b;--red2:#f8e1da;--chart:#1d6b4a;--fc:#c78500;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#f4f7ef;--surf:#fff;--ink:#14261c;--mut:#5b6b60;--line:#dbe3d6;--grn:#1d6b4a;--grn2:#e3f1e8;--gold:#e0a100;--gold2:#fbf0cc;--red:#b4432b;--red2:#f8e1da;--chart:#1d6b4a;--fc:#c78500;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a13;--surf:#15261c;--ink:#e8f0e9;--mut:#9db0a2;--line:#27402f;--grn:#5fcf93;--grn2:#17382a;--gold:#f0b429;--gold2:#3a2f0e;--red:#ff8d73;--red2:#3d1f19;--chart:#5fcf93;--fc:#f0b429}}
 :root[data-theme="dark"]{--bg:#0e1a13;--surf:#15261c;--ink:#e8f0e9;--mut:#9db0a2;--line:#27402f;--grn:#5fcf93;--grn2:#17382a;--gold:#f0b429;--gold2:#3a2f0e;--red:#ff8d73;--red2:#3d1f19;--chart:#5fcf93;--fc:#f0b429}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 Figtree,system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .wrap{max-width:1080px;margin:0 auto;padding:20px 16px 48px}
-h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;margin:0;line-height:1.15}
+h1,h2,h3{font-family:"Trebuchet MS",system-ui,sans-serif;margin:0;line-height:1.15}
 header{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between;margin-bottom:18px}
 h1{font-size:44px;font-weight:800;letter-spacing:-.02em}
 .tag{color:var(--mut);max-width:46ch;margin:4px 0 0}
@@ -24,22 +23,22 @@ h1{font-size:44px;font-weight:800;letter-spacing:-.02em}
 .ctrl{display:grid;gap:10px;margin-bottom:16px}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .row b{font-size:14px;color:var(--mut);min-width:64px;font-weight:500}
-.chip{border:1px solid var(--line);background:var(--surf);color:var(--ink);border-radius:999px;padding:7px 15px;font:500 15px Figtree,sans-serif;cursor:pointer}
+.chip{border:1px solid var(--line);background:var(--surf);color:var(--ink);border-radius:999px;padding:7px 15px;font:500 15px system-ui,sans-serif;cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--grn);border-color:var(--grn);color:var(--bg)}
 button:focus-visible,input:focus-visible,tr:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:16px}
 .card{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:18px}
 .card h2{font-size:19px;margin-bottom:10px}
-.big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;letter-spacing:-.02em}
+.big{font-family:"Trebuchet MS",sans-serif;font-weight:800;font-size:40px;letter-spacing:-.02em}
 .big small{font-size:16px;font-weight:600;color:var(--mut)}
 .meta{color:var(--mut);font-size:14px}
 svg{width:100%;height:auto;display:block}
 .adv{border-radius:12px;padding:14px;margin:12px 0}
 .adv.hold{background:var(--grn2)}.adv.sell{background:var(--red2)}.adv.flat{background:var(--gold2)}.adv.off{background:var(--line)}
 .adv h3{font-size:22px;margin-bottom:6px}
-.sw{font-size:17px;font-weight:500}.en{color:var(--mut);font-size:14px;margin-top:6px}
-.btn{background:var(--grn);color:var(--bg);border:0;border-radius:10px;padding:10px 16px;font:700 15px Figtree,sans-serif;cursor:pointer}
+.sw{font-size:17px;font-weight:500}
 .conf{display:inline-block;font-size:13px;font-weight:700;margin-right:8px}
+.btn{background:var(--grn);color:var(--bg);border:0;border-radius:10px;padding:10px 16px;font:700 15px system-ui,sans-serif;cursor:pointer}
 table{width:100%;border-collapse:collapse;font-size:15px}
 th,td{padding:9px 8px;text-align:right;border-bottom:1px solid var(--line)}
 th:first-child,td:first-child{text-align:left}
@@ -56,190 +55,227 @@ tbody tr{cursor:pointer}tbody tr:hover,tr.sel{background:var(--grn2)}
 .msg{max-width:85%;padding:8px 11px;border-radius:12px;font-size:14px;white-space:pre-wrap}
 .me{align-self:flex-end;background:var(--grn);color:var(--bg)}.bot{align-self:flex-start;background:var(--surf);border:1px solid var(--line)}
 form{display:flex;gap:8px;margin-top:10px}
-input{flex:1;min-width:0;border:1px solid var(--line);background:var(--surf);color:var(--ink);border-radius:10px;padding:10px;font:16px Figtree,sans-serif}
+input[type=text]{flex:1;min-width:0;border:1px solid var(--line);background:var(--surf);color:var(--ink);border-radius:10px;padding:10px;font:16px system-ui,sans-serif}
 .how{margin:16px 0 0;font-size:14px;color:var(--mut)}
 .notice{background:var(--gold2);border:1px solid var(--gold);border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:14px}
 body.offline .dash{opacity:.4;pointer-events:none;filter:grayscale(.6)}
 .calc{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}.calc input{width:100%;padding:0}
 .ussd{background:#0d1511;color:#b8f7c9;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;white-space:pre-wrap;border-radius:10px;padding:12px;min-height:150px}
-.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}.kp button{border:1px solid var(--line);background:var(--surf);color:var(--ink);border-radius:10px;padding:9px;font:700 17px Figtree,system-ui,sans-serif;cursor:pointer}.kp button:last-child{grid-column:span 3}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}.kp button{border:1px solid var(--line);background:var(--surf);color:var(--ink);border-radius:10px;padding:9px;font:700 17px system-ui,sans-serif;cursor:pointer}.kp button:last-child{grid-column:span 3}
 @media (max-width:820px){.grid,.two{grid-template-columns:1fr}h1{font-size:36px}}
-@media (prefers-reduced-motion:no-preference){.adv{transition:background .25s}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
- <div><h1>Dira</h1><p class="tag">Know when to sell. Crop price forecasts and advice in Swahili for smallholder farmers.</p></div>
- <span class="row"><span class="badge">Prototype · sampled data for 5 regions</span><button class="chip" id="nb" aria-pressed="false">Simulate no internet</button></span>
+ <div><h1>Dira</h1><p class="tag" id="tag"></p></div>
+ <span class="row"><button class="chip" id="lsw" aria-pressed="true">Kiswahili</button><button class="chip" id="len" aria-pressed="false">English</button><span class="badge" id="badge"></span><button class="chip" id="nb" aria-pressed="false"></button></span>
 </header>
-
-<div class="notice" id="offnote" hidden>No internet. The dashboard is paused, but the phone below still works: USSD and SMS run on the mobile network and need no data bundle.</div>
+<div class="notice" id="offnote" hidden></div>
 
 <div class="ctrl dash">
- <div class="row"><b>Region</b><span id="regs" class="row"></span></div>
- <div class="row"><b>Crop</b><span id="crops" class="row"></span></div>
+ <div class="row"><b id="lReg"></b><span id="regs" class="row"></span></div>
+ <div class="row"><b id="lCrop"></b><span id="crops" class="row"></span></div>
 </div>
 
 <div class="grid dash">
  <section class="card">
-  <h2 id="ct">Price trend and 14-day forecast</h2>
+  <h2 id="ct"></h2>
   <div class="big" id="price"></div>
   <div class="meta" id="pmeta"></div>
-  <div id="chart" role="img" aria-label="Price history and forecast chart"></div>
-  <div class="meta" id="tip"><b>Hover or tap the chart to read any day’s price.</b></div>
-  <div class="meta">Solid line: past 60 days. Dashed line: forecast with an 80% range. Prices in TSh per kg.</div>
+  <div id="chart" role="img" aria-label="Chart"></div>
+  <div class="meta" id="tip"></div>
+  <div class="meta" id="cnote"></div>
  </section>
  <section class="card">
-  <h2>Advice for this farmer</h2>
+  <h2 id="advH"></h2>
   <div id="advice"></div>
-  <button class="btn" id="speak">Sikiliza ushauri (voice)</button>
+  <button class="btn" id="speak"></button>
   <p class="meta" id="vmsg" aria-live="polite"></p>
-  <div class="calc"><label for="kg">Your harvest: <b id="kgv">500</b> kg</label><input type="range" id="kg" min="50" max="5000" step="50" value="500"><div id="inc" class="meta"></div></div>
+  <div class="calc"><label for="kg" id="kl"></label><input type="range" id="kg" min="50" max="5000" step="50" value="500"><div id="inc" class="meta"></div></div>
   <div class="how" id="how"></div>
  </section>
 </div>
 
 <section class="card dash" style="margin-top:16px">
- <h2 id="mt">Compare markets</h2>
- <div class="scroll"><table><thead><tr><th>Region</th><th>Today</th><th>In 14 days</th><th>Change</th><th>Advice</th></tr></thead><tbody id="mkt"></tbody></table></div>
+ <h2 id="mt"></h2>
+ <div class="scroll"><table><thead><tr><th id="th1"></th><th id="th2"></th><th id="th3"></th><th id="th4"></th><th id="th5"></th></tr></thead><tbody id="mkt"></tbody></table></div>
 </section>
 
 <div class="two">
  <section class="card dash">
-  <h2 id="wt">Weather this week</h2>
+  <h2 id="wt"></h2>
   <div class="wx" id="wx"></div>
   <p class="meta" id="wn"></p>
  </section>
  <section class="card">
-  <h2>Basic phone, no internet</h2><p class="meta">Try it like a farmer with a basic phone: dial a USSD code or send an SMS.</p><div class="row" style="margin-bottom:8px"><button class="chip" id="tU" aria-pressed="true">USSD</button><button class="chip" id="tS" aria-pressed="false">SMS</button></div>
+  <h2 id="phH"></h2><p class="meta" id="phD"></p>
+  <div class="row" style="margin-bottom:8px"><button class="chip" id="tU" aria-pressed="true">USSD</button><button class="chip" id="tS" aria-pressed="false">SMS</button></div>
   <div class="phone" id="sms" aria-live="polite"></div>
-  <form id="f"><input id="q" placeholder="BEI MAHINDI MOROGORO" aria-label="SMS message" autocomplete="off"><button class="btn">Send</button></form>
+  <form id="f"><input type="text" id="q" aria-label="Input" autocomplete="off"><button class="btn" id="sb"></button></form>
   <div class="kp" id="kp"></div>
   <div class="row" id="qc" style="margin-top:8px"></div>
  </section>
 </div>
-<p class="how">All prices and weather here are simulated sample data for Morogoro, Tanga, Kilimanjaro, Mbeya and Singida. The forecasting code is real: swap the sample series for Ministry of Agriculture prices and Open-Meteo weather to go live.</p>
+<p class="how" id="foot"></p>
 </div>
 
 <script>
 const REG=['Morogoro','Tanga','Kilimanjaro','Mbeya','Singida'];
 const CR=[['Mahindi','Maize',900],['Mchele','Rice',2300],['Maharage','Beans',2500],['Nyanya','Tomatoes',1500]];
 const MULT=[[.92,.95,1,.9],[1.05,1,1,1],[1.12,1.08,.98,.85],[.85,.9,.92,1.05],[.95,1.1,1.05,1.15]];
-const N=90,H=14,SHOW=60;
-let ri=0,ci=0,lastAdvice='',cur,mode='ussd',us=null;
+const N=90,H=14,SHOW=60,MINUS='−',DIAL='*150*77#';
+let ri=0,ci=0,cur,mode='ussd',us=null,lang='sw';
+try{lang=localStorage.getItem('dira-lang')||'sw'}catch(e){}
 const $=id=>document.getElementById(id);
+const T=(s,e)=>lang==='sw'?s:e;
+const cn=c=>T(CR[c][0],CR[c][1]),cl=c=>cn(c).toLowerCase();
 const fmt=n=>Math.round(n).toLocaleString('en-US');
+/* Numbers in Swahili words, so the voice reads prices clearly */
+const U=['sifuri','moja','mbili','tatu','nne','tano','sita','saba','nane','tisa'],TN=['','kumi','ishirini','thelathini','arobaini','hamsini','sitini','sabini','themanini','tisini'];
+function sw(n){n=Math.round(n);if(n<10)return U[n];if(n<100){const t=Math.floor(n/10),u=n%10;return TN[t]+(u?' na '+U[u]:'')}
+ if(n<1000){const h=Math.floor(n/100),r=n%100;return 'mia '+U[h]+(r?' na '+sw(r):'')}
+ if(n<1e6){const k=Math.floor(n/1000),r=n%1000;return 'elfu '+sw(k)+(r?' na '+sw(r):'')}return String(n)}
+const pr=(v,sp)=>sp?(lang==='sw'?'shilingi '+sw(v):fmt(v)+' shillings'):'TSh '+fmt(v);
 function rng(s){return()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 function gen(r,c){const g=rng(1000+r*37+c*101),base=CR[c][2]*MULT[r][c],vol=c==3?.012:.005;let p=base,v=0,o=[];for(let i=0;i<N;i++){v=.93*v+(g()-.5)*vol;p=p*(1+v)+(base-p)*.015;o.push(Math.round(p*(1+(g()-.5)*.01)/10)*10)}return o}
 const DATA=REG.map((_,r)=>CR.map((_,c)=>gen(r,c)));
-/* Damped Holt trend model */
 function holt(s,h){let l=s[0],b=s[1]-s[0];const a=.4,be=.15,phi=.9;for(let i=1;i<s.length;i++){const pl=l;l=a*s[i]+(1-a)*(pl+phi*b);b=be*(l-pl)+(1-be)*phi*b}let o=[],acc=0,k=1;for(let i=1;i<=h;i++){k*=phi;acc+=k;o.push(l+acc*b)}return o}
 function analyze(r,c){const s=DATA[r][c],fc=holt(s,H);let em=0,en=0,se=0,n=0;for(let o=N-40;o<=N-8;o+=2){const p=holt(s.slice(0,o+1),7)[6],a=s[o+7];em+=Math.abs(p-a);en+=Math.abs(s[o]-a);se+=(p-a)**2;n++}
  em/=n;en/=n;const skill=1-em/en,sd=Math.sqrt(se/n),last=s[N-1],end=fc[H-1],ch=(end-last)/last;
- const ok=skill>=.05,conf=skill>=.2?'High':'Medium';
- const kind=!ok?'off':ch>=.04?'hold':ch<=-.04?'sell':'flat';
+ const ok=skill>=.05,conf=skill>=.2?'High':'Medium',kind=!ok?'off':ch>=.04?'hold':ch<=-.04?'sell':'flat';
  return{s,fc,sd,skill,ok,conf,last,end,ch,kind,mae:em,naive:en}}
-function swa(r,c,a){const cn=CR[c][0],rg=REG[r],p='TSh '+fmt(a.end);
- return{hold:[`Bei ya ${cn.toLowerCase()} ${rg} inatarajiwa kupanda hadi ${p} kwa kilo ndani ya siku 14.`,'Subiri kuuza.','Hold: price is expected to rise.'],
- sell:[`Bei ya ${cn.toLowerCase()} ${rg} inatarajiwa kushuka hadi ${p} kwa kilo.`,'Uza sasa kama unaweza.','Sell now: price is expected to fall.'],
- flat:[`Bei ya ${cn.toLowerCase()} ${rg} itatulia karibu ${p} kwa kilo.`,'Uza wakati unapohitaji.','Steady: sell when you need to.'],
- off:[`Utabiri wa ${cn.toLowerCase()} ${rg} hauaminiki kwa sasa.`,'Hatutoi ushauri. Angalia bei sokoni.','Advice withheld: the forecast did not beat the simple baseline.']}[a.kind]}
-const LBL={hold:'Subiri',sell:'Uza sasa',flat:'Bei imetulia',off:'Hakuna ushauri'};
-const dayLbl=o=>{const d=new Date(2026,10,5+o);return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})};
+const CONF=k=>k==='High'?T('juu','high'):T('wastani','medium');
+const LBL=k=>({hold:T('Subiri','Hold'),sell:T('Uza sasa','Sell now'),flat:T('Bei imetulia','Steady'),off:T('Hakuna ushauri','No advice')})[k];
+/* Advice text. sp=true gives text prepared for the voice (numbers in words). */
+function adv(r,c,a,sp){const p=pr(a.end,sp),g=REG[r],z=cl(c),u=T('kwa kilo',sp?'per kilo':'per kg');
+ return {hold:[T(`Bei ya ${z} ${g} inatarajiwa kupanda hadi ${p} ${u} ndani ya siku 14.`,`The ${z} price in ${g} is expected to rise to ${p} ${u} within 14 days.`),T('Subiri kuuza.','Hold off selling.')],
+ sell:[T(`Bei ya ${z} ${g} inatarajiwa kushuka hadi ${p} ${u}.`,`The ${z} price in ${g} is expected to fall to ${p} ${u}.`),T('Uza sasa kama unaweza.','Sell now if you can.')],
+ flat:[T(`Bei ya ${z} ${g} itatulia karibu ${p} ${u}.`,`The ${z} price in ${g} will stay steady around ${p} ${u}.`),T('Uza wakati unapohitaji.','Sell whenever you need to.')],
+ off:[T(`Utabiri wa ${z} ${g} hauaminiki kwa sasa.`,`The ${z} forecast for ${g} is not reliable right now.`),T('Hatutoi ushauri. Angalia bei sokoni.','We are not giving advice. Check the market price.')]}[a.kind]}
+const dayLbl=o=>new Date(2026,10,5+o).toLocaleDateString(T('sw','en-GB'),{day:'numeric',month:'short'});
 
-function chart(a){const W=720,Hh=300,L=48,R=10,T=12,B=26,hs=a.s.slice(-SHOW),all=hs.concat(a.fc);
- const hi=a.fc.map(v=>v+a.sd*1.28*Math.sqrt(1)),lo=a.fc.map(v=>v-a.sd*1.28);
- const mn=Math.min(...hs,...lo)*.98,mx=Math.max(...hs,...hi)*1.02,tot=SHOW+H-1;
- const x=i=>L+i*(W-L-R)/tot,y=v=>T+(mx-v)*(Hh-T-B)/(mx-mn);
+function chart(a){const W=720,Hh=300,L=48,R=10,T0=12,B=26,hs=a.s.slice(-SHOW),tot=SHOW+H-1,z=1.28;
+ const hi=a.fc.map(v=>v+a.sd*z),lo=a.fc.map(v=>v-a.sd*z),mn=Math.min(...hs,...lo)*.98,mx=Math.max(...hs,...hi)*1.02;
+ const x=i=>L+i*(W-L-R)/tot,y=v=>T0+(mx-v)*(Hh-T0-B)/(mx-mn);
  let g='';for(let k=0;k<5;k++){const v=mn+(mx-mn)*k/4;g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--mut)">${fmt(v)}</text>`}
- [0,30,SHOW-1,SHOW+H-1].forEach(i=>{g+=`<text x="${x(i)}" y="${Hh-6}" text-anchor="${i==0?'start':i==tot?'end':'middle'}" font-size="11" fill="var(--mut)">${dayLbl(i-(SHOW-1))}</text>`});
- const hp=hs.map((v,i)=>(i?'L':'M')+x(i)+' '+y(v)).join(' ');
- let out=`<svg viewBox="0 0 ${W} ${Hh}">${g}<line x1="${x(SHOW-1)}" x2="${x(SHOW-1)}" y1="${T}" y2="${Hh-B}" stroke="var(--mut)" stroke-dasharray="2 4"/><path d="${hp}" fill="none" stroke="var(--chart)" stroke-width="2.5"/>`;
- if(a.ok){const pts=[[SHOW-1,a.last]].concat(a.fc.map((v,i)=>[SHOW+i,v]));
-  const up=pts.map(p=>x(p[0])+','+y(p[1]+(p[0]==SHOW-1?0:a.sd*1.28*Math.sqrt((p[0]-SHOW+1)/7)))).join(' '),dn=pts.slice().reverse().map(p=>x(p[0])+','+y(p[1]-(p[0]==SHOW-1?0:a.sd*1.28*Math.sqrt((p[0]-SHOW+1)/7)))).join(' ');
+ [0,30,SHOW-1,tot].forEach(i=>{g+=`<text x="${x(i)}" y="${Hh-6}" text-anchor="${i==0?'start':i==tot?'end':'middle'}" font-size="11" fill="var(--mut)">${dayLbl(i-(SHOW-1))}</text>`});
+ let out=`<svg viewBox="0 0 ${W} ${Hh}">${g}<line x1="${x(SHOW-1)}" x2="${x(SHOW-1)}" y1="${T0}" y2="${Hh-B}" stroke="var(--mut)" stroke-dasharray="2 4"/><path d="${hs.map((v,i)=>(i?'L':'M')+x(i)+' '+y(v)).join(' ')}" fill="none" stroke="var(--chart)" stroke-width="2.5"/>`;
+ if(a.ok){const pts=[[SHOW-1,a.last]].concat(a.fc.map((v,i)=>[SHOW+i,v])),w=p=>p[0]==SHOW-1?0:a.sd*z*Math.sqrt((p[0]-SHOW+1)/7);
+  const up=pts.map(p=>x(p[0])+','+y(p[1]+w(p))).join(' '),dn=pts.slice().reverse().map(p=>x(p[0])+','+y(p[1]-w(p))).join(' ');
   out+=`<polygon points="${up} ${dn}" fill="var(--fc)" opacity=".18"/><path d="${pts.map((p,i)=>(i?'L':'M')+x(p[0])+' '+y(p[1])).join(' ')}" fill="none" stroke="var(--fc)" stroke-width="2.5" stroke-dasharray="6 5"/>`}
- else out+=`<text x="${x(SHOW)+4}" y="${T+16}" font-size="12" fill="var(--red)">Forecast withheld</text>`;
+ else out+=`<text x="${x(SHOW)+4}" y="${T0+16}" font-size="12" fill="var(--red)">${T('Utabiri umezuiwa','Forecast withheld')}</text>`;
  return out+'</svg>'}
 
+const ST=()=>({tag:T('Jua wakati wa kuuza. Utabiri wa bei za mazao na ushauri kwa Kiswahili kwa wakulima wadogo.','Know when to sell. Crop price forecasts and advice for smallholder farmers, in Swahili or English.'),
+ badge:T('Mfano · data za majaribio za mikoa 5','Prototype · sampled data for 5 regions'),
+ offnote:T('Hakuna intaneti. Dashibodi imesimama, lakini simu iliyo hapa chini bado inafanya kazi: USSD na SMS hutumia mtandao wa simu, si bando la data.','No internet. The dashboard is paused, but the phone below still works: USSD and SMS use the mobile network, not a data bundle.'),
+ lReg:T('Mkoa','Region'),lCrop:T('Zao','Crop'),
+ cnote:T('Mstari kamili: siku 60 zilizopita. Mstari wa vitone: utabiri na kiwango cha 80%. Bei ni TSh kwa kilo.','Solid line: past 60 days. Dashed line: forecast with an 80% range. Prices in TSh per kg.'),
+ advH:T('Ushauri kwa mkulima','Advice for this farmer'),speak:T('Sikiliza ushauri','Listen to advice'),
+ th1:T('Mkoa','Region'),th2:T('Leo','Today'),th3:T('Siku 14','In 14 days'),th4:T('Mabadiliko','Change'),th5:T('Ushauri','Advice'),
+ phH:T('Simu ya kawaida, bila intaneti','Basic phone, no internet'),
+ phD:T(`Jaribu kama mkulima mwenye simu ya kawaida: piga ${DIAL} au tuma SMS.`,`Try it like a farmer with a basic phone: dial ${DIAL} or send an SMS.`),
+ sb:T('Tuma','Send'),
+ foot:T('Bei na hali ya hewa hapa ni data za majaribio za Morogoro, Tanga, Kilimanjaro, Mbeya na Singida. Msimbo wa utabiri ni halisi: badilisha data hizi na bei za Wizara ya Kilimo na hali ya hewa ya Open-Meteo ili ifanye kazi kamili.','All prices and weather here are simulated sample data for Morogoro, Tanga, Kilimanjaro, Mbeya and Singida. The forecasting code is real: swap in Ministry of Agriculture prices and Open-Meteo weather to go live.')});
+function applyLang(){const s=ST();for(const k in s)$(k).textContent=s[k];document.documentElement.lang=lang;
+ $('lsw').setAttribute('aria-pressed',lang==='sw');$('len').setAttribute('aria-pressed',lang==='en');
+ $('chart').setAttribute('aria-label',T('Chati ya bei na utabiri','Price history and forecast chart'));
+ setNet(document.body.classList.contains('offline'));try{localStorage.setItem('dira-lang',lang)}catch(e){}
+ if(window.speechSynthesis)speechSynthesis.cancel();$('vmsg').textContent='';render();setMode(mode)}
+
 function render(){
- const a=cur=analyze(ri,ci),cn=CR[ci];
+ const a=cur=analyze(ri,ci);
  $('regs').innerHTML=REG.map((n,i)=>`<button class="chip" aria-pressed="${i==ri}" data-r="${i}">${n}</button>`).join('');
- $('crops').innerHTML=CR.map((n,i)=>`<button class="chip" aria-pressed="${i==ci}" data-c="${i}">${n[0]} (${n[1]})</button>`).join('');
- $('ct').textContent=`${cn[0]} in ${REG[ri]}: trend and 14-day forecast`;
+ $('crops').innerHTML=CR.map((n,i)=>`<button class="chip" aria-pressed="${i==ci}" data-c="${i}">${cn(i)}</button>`).join('');
+ $('ct').textContent=T(`${cn(ci)} ${REG[ri]}: mwenendo wa bei na utabiri wa siku 14`,`${cn(ci)} in ${REG[ri]}: price trend and 14-day forecast`);
  const d=a.s[N-1]-a.s[N-8];
- $('price').innerHTML=`TSh ${fmt(a.last)} <small>per kg today</small>`;
- $('pmeta').innerHTML=`<span class="${d>=0?'up':'dn'}">${d>=0?'+':'−'}${fmt(Math.abs(d))}</span> over the last 7 days`;
- $('chart').innerHTML=chart(a);
- const t=swa(ri,ci,a);
- lastAdvice=t[0]+' '+t[1];
- $('advice').innerHTML=`<div class="adv ${a.kind}"><h3>${LBL[a.kind]}</h3><div class="sw">${t[0]} ${t[1]}</div><div class="en">${t[2]}</div></div>`+
-  (a.ok?`<span class="conf">Confidence: ${a.conf}</span><span class="meta">Forecast: TSh ${fmt(a.end)} on ${dayLbl(H)} (${a.ch>=0?'+':'−'}${Math.abs(a.ch*100).toFixed(1)}%)</span>`:`<span class="conf" style="color:var(--red)">Confidence: too low</span>`);
- $('how').innerHTML=`How we checked: on the past 5 weeks, the model’s 7-day error was TSh ${fmt(a.mae)} vs TSh ${fmt(a.naive)} for “price stays the same”. ${a.ok?'It beat the baseline, so advice is shown.':'It did not beat the baseline, so advice is withheld.'}`;
+ $('price').innerHTML=`TSh ${fmt(a.last)} <small>${T('kwa kilo leo','per kg today')}</small>`;
+ $('pmeta').innerHTML=`<span class="${d>=0?'up':'dn'}">${d>=0?'+':MINUS}${fmt(Math.abs(d))}</span> ${T('ndani ya siku 7 zilizopita','over the last 7 days')}`;
+ $('chart').innerHTML=chart(a);$('tip').textContent=T('Gusa au elekeza kwenye chati kuona bei ya siku yoyote.','Hover or tap the chart to read any day’s price.');
+ const t=adv(ri,ci,a);
+ $('advice').innerHTML=`<div class="adv ${a.kind}"><h3>${LBL(a.kind)}</h3><div class="sw">${t[0]} ${t[1]}</div></div>`+
+  (a.ok?`<span class="conf">${T('Uhakika','Confidence')}: ${CONF(a.conf)}</span><span class="meta">${T('Utabiri','Forecast')}: TSh ${fmt(a.end)} · ${dayLbl(H)} (${a.ch>=0?'+':MINUS}${Math.abs(a.ch*100).toFixed(1)}%)</span>`:`<span class="conf" style="color:var(--red)">${T('Uhakika: mdogo sana','Confidence: too low')}</span>`);
+ $('how').textContent=T(`Tulivyokagua: katika wiki 5 zilizopita, kosa la utabiri wa siku 7 lilikuwa TSh ${fmt(a.mae)} dhidi ya TSh ${fmt(a.naive)} kwa “bei haibadiliki”. ${a.ok?'Utabiri ulishinda, kwa hiyo ushauri unaonyeshwa.':'Utabiri haukushinda, kwa hiyo ushauri umezuiwa.'}`,`How we checked: on the past 5 weeks, the model’s 7-day error was TSh ${fmt(a.mae)} vs TSh ${fmt(a.naive)} for “price stays the same”. ${a.ok?'It beat the baseline, so advice is shown.':'It did not beat the baseline, so advice is withheld.'}`);
  const rows=REG.map((n,r)=>({n,r,a:analyze(r,ci)})),best=Math.max(...rows.map(x=>x.a.last));
- $('mt').textContent=`Compare markets for ${cn[0].toLowerCase()} (${cn[1].toLowerCase()})`;
- $('mkt').innerHTML=rows.map(x=>`<tr tabindex="0" data-r="${x.r}" class="${x.r==ri?'sel':''}"><td>${x.n}</td><td>${fmt(x.a.last)}${x.a.last==best?'<span class="best">Highest</span>':''}</td><td>${x.a.ok?fmt(x.a.end):'—'}</td><td class="${x.a.ch>=0?'up':'dn'}">${x.a.ok?(x.a.ch>=0?'+':'−')+Math.abs(x.a.ch*100).toFixed(1)+'%':'—'}</td><td>${LBL[x.a.kind]}</td></tr>`).join('');
+ $('mt').textContent=T(`Linganisha masoko ya ${cl(ci)}`,`Compare markets for ${cl(ci)}`);
+ $('mkt').innerHTML=rows.map(x=>`<tr tabindex="0" data-r="${x.r}" class="${x.r==ri?'sel':''}"><td>${x.n}</td><td>${fmt(x.a.last)}${x.a.last==best?`<span class="best">${T('Juu zaidi','Highest')}</span>`:''}</td><td>${x.a.ok?fmt(x.a.end):'—'}</td><td class="${x.a.ch>=0?'up':'dn'}">${x.a.ok?(x.a.ch>=0?'+':MINUS)+Math.abs(x.a.ch*100).toFixed(1)+'%':'—'}</td><td>${LBL(x.a.kind)}</td></tr>`).join('');
  weather();updateInc();try{localStorage.setItem('dira',ri+','+ci)}catch(e){}
 }
 const TEMP=[30,31,24,22,27];
-function weather(){const g=rng(77+ri*13),days=['Fri','Sat','Sun','Mon','Tue','Wed','Thu'];let tot=0;
- $('wt').textContent=`Weather in ${REG[ri]} this week`;
- $('wx').innerHTML=days.map(d=>{const r=Math.max(0,Math.round((g()-.45)*30)),t=Math.round(TEMP[ri]+(g()-.5)*4);tot+=r;return `<div>${d}<i style="height:${6+r*2}px"></i>${r} mm<br>${t}°C</div>`}).join('');
- $('wn').textContent=tot>40?`About ${tot} mm of rain expected: good moisture for planting, but dry harvested ${CR[ci][0].toLowerCase()} before storing. (Sample weather)`:`About ${tot} mm of rain expected: fairly dry week, good for harvesting and drying. (Sample weather)`}
+function wxSum(r){const g=rng(77+r*13);let tot=0;for(let i=0;i<7;i++){tot+=Math.max(0,Math.round((g()-.45)*30));g()}return{rain:tot,t:TEMP[r]}}
+function weather(){const g=rng(77+ri*13);let tot=0;
+ $('wt').textContent=T(`Hali ya hewa ${REG[ri]} wiki hii`,`Weather in ${REG[ri]} this week`);
+ $('wx').innerHTML=[0,1,2,3,4,5,6].map(i=>{const d=new Date(2026,10,5+i).toLocaleDateString(T('sw','en-GB'),{weekday:'short'}),r=Math.max(0,Math.round((g()-.45)*30)),t=Math.round(TEMP[ri]+(g()-.5)*4);tot+=r;return `<div>${d}<i style="height:${6+r*2}px"></i>${r} mm<br>${t}°C</div>`}).join('');
+ const z=cl(ci);
+ $('wn').textContent=tot>40?T(`Mvua ya takriban mm ${tot} inatarajiwa: unyevu mzuri wa kupanda, lakini kausha ${z} iliyovunwa kabla ya kuhifadhi. (Hali ya hewa ya majaribio)`,`About ${tot} mm of rain expected: good moisture for planting, but dry harvested ${z} before storing. (Sample weather)`):T(`Mvua ya takriban mm ${tot} inatarajiwa: wiki kavu kiasi, nzuri kwa kuvuna na kukausha. (Hali ya hewa ya majaribio)`,`About ${tot} mm of rain expected: fairly dry week, good for harvesting and drying. (Sample weather)`)}
 
 document.addEventListener('click',e=>{const b=e.target.closest('[data-r],[data-c],[data-q]');if(!b)return;
  if(b.dataset.q){submitPhone(b.dataset.q);return}
  if(b.dataset.r!==undefined)ri=+b.dataset.r;if(b.dataset.c!==undefined)ci=+b.dataset.c;render()});
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.matches('tr[data-r]')){ri=+e.target.dataset.r;render()}});
-$('speak').onclick=()=>{const m=$('vmsg');if(!('speechSynthesis' in window)){m.textContent='Voice is not supported in this browser.';return}
- speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(lastAdvice);u.lang='sw-TZ';const v=speechSynthesis.getVoices().find(x=>x.lang.toLowerCase().startsWith('sw'));
- if(v)u.voice=v;m.textContent=v?'Playing in Swahili.':'No Swahili voice on this device, so it may sound off. The full system uses Swahili text-to-speech.';speechSynthesis.speak(u)};
+$('lsw').onclick=()=>{lang='sw';applyLang()};$('len').onclick=()=>{lang='en';applyLang()};
 
-function reply(t){t=t.toUpperCase();const c=CR.findIndex(x=>t.includes(x[0].toUpperCase())),r=REG.findIndex(x=>t.includes(x.toUpperCase()));
- if(t.startsWith('SOKO')&&c>=0){const rows=REG.map((n,i)=>({n,a:analyze(i,c)})).sort((x,y)=>y.a.last-x.a.last);return `Soko bora kwa ${CR[c][0].toLowerCase()}: ${rows[0].n} TSh ${fmt(rows[0].a.last)}/kg, kisha ${rows[1].n} TSh ${fmt(rows[1].a.last)}.`}
- if(t.startsWith('BEI')&&c>=0&&r>=0){const a=analyze(r,c),s=swa(r,c,a);return `${CR[c][0]} ${REG[r]}: leo TSh ${fmt(a.last)}/kg. ${s[1]}${a.ok?' Uhakika: '+(a.conf=='High'?'juu':'wastani')+'.':''}`}
- if(t.startsWith('UTABIRI')&&c>=0&&r>=0){const a=analyze(r,c);return a.ok?`${CR[c][0]} ${REG[r]} siku 14: TSh ${fmt(a.end)}/kg (${a.ch>=0?'+':'−'}${Math.abs(a.ch*100).toFixed(1)}%).`:'Utabiri hauaminiki kwa sasa. Hatutoi ushauri.'}
- if(t.startsWith('HALI')&&r>=0){const w=wxSum(r);return `Hali ya hewa ${REG[r]}: mvua ${w.rain} mm wiki hii, joto ${w.t}°C.`}
- return 'Tuma: BEI MAHINDI MOROGORO | UTABIRI NYANYA TANGA | SOKO MAHINDI | HALI MBEYA'}
-function send(t){t=t.trim();if(!t)return;const p=$('sms');p.insertAdjacentHTML('beforeend',`<div class="msg me"></div><div class="msg bot"></div>`);
+/* Voice: device voice first (works offline), online Swahili voice as fallback */
+let aud=null;
+function stopSpeech(){try{speechSynthesis.cancel()}catch(e){}if(aud){aud.pause();aud=null}}
+function chunks(t){const o=[];let c='';t.split(/(?<=[.!?])\s+/).forEach(s=>{if(c&&(c+' '+s).length>170){o.push(c);c=s}else c=c?c+' '+s:s});if(c)o.push(c);return o}
+function playOnline(p,i){if(i>=p.length){$('vmsg').textContent='';return}
+ aud=new Audio('https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=sw&q='+encodeURIComponent(p[i]));aud.referrerPolicy='no-referrer';
+ const fail=()=>{$('vmsg').textContent='Sauti ya mtandaoni haikupatikana. Tumia Microsoft Edge, au weka sauti ya Kiswahili kwenye Mipangilio ya Maandishi-kwa-sauti ya kifaa chako.'};
+ aud.onended=()=>playOnline(p,i+1);aud.onerror=fail;aud.play().catch(fail)}
+$('speak').onclick=()=>{stopSpeech();const m=$('vmsg'),text=adv(ri,ci,cur,true).join(' ');let vs=[];
+ try{vs=speechSynthesis.getVoices().filter(v=>v.lang.toLowerCase().startsWith(lang))}catch(e){}
+ if(vs.length){const v=vs.find(x=>/natural|online|google/i.test(x.name))||vs[0],u=new SpeechSynthesisUtterance(text);u.voice=v;u.lang=v.lang;u.rate=.9;m.textContent=T('Inasoma kwa Kiswahili…','Reading aloud…');speechSynthesis.speak(u);return}
+ if(lang==='sw'&&navigator.onLine){m.textContent='Inasoma kwa Kiswahili (sauti ya mtandaoni)…';playOnline(chunks(text),0);return}
+ m.textContent=lang==='sw'?'Hakuna sauti ya Kiswahili kwenye kifaa hiki na hakuna intaneti. Tumia Microsoft Edge au Chrome ya Android, au weka Kiswahili kwenye Mipangilio > Maandishi-kwa-sauti.':'No English voice was found on this device.'};
+try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>speechSynthesis.getVoices()}catch(e){}
+
+/* SMS and USSD, in the chosen language */
+function reply(t){t=t.toUpperCase();const w=t.split(/\s+/)[0],c=CR.findIndex(x=>t.includes(x[0].toUpperCase())||t.includes(x[1].toUpperCase())),r=REG.findIndex(x=>t.includes(x.toUpperCase()));
+ if(['SOKO','MARKET'].includes(w)&&c>=0){const rows=REG.map((n,i)=>({n,a:analyze(i,c)})).sort((x,y)=>y.a.last-x.a.last);return T(`Soko bora kwa ${cl(c)}: ${rows[0].n} TSh ${fmt(rows[0].a.last)}/kg, kisha ${rows[1].n} TSh ${fmt(rows[1].a.last)}.`,`Best market for ${cl(c)}: ${rows[0].n} TSh ${fmt(rows[0].a.last)}/kg, then ${rows[1].n} TSh ${fmt(rows[1].a.last)}.`)}
+ if(['BEI','PRICE'].includes(w)&&c>=0&&r>=0){const a=analyze(r,c),s=adv(r,c,a);return `${cn(c)} ${REG[r]}: ${T('leo','today')} TSh ${fmt(a.last)}/kg. ${s[1]}`+(a.ok?` ${T('Uhakika','Confidence')}: ${CONF(a.conf)}.`:'')}
+ if(['UTABIRI','FORECAST'].includes(w)&&c>=0&&r>=0){const a=analyze(r,c);return a.ok?T(`${cn(c)} ${REG[r]} siku 14: TSh ${fmt(a.end)}/kg (${a.ch>=0?'+':MINUS}${Math.abs(a.ch*100).toFixed(1)}%).`,`${cn(c)} ${REG[r]} in 14 days: TSh ${fmt(a.end)}/kg (${a.ch>=0?'+':MINUS}${Math.abs(a.ch*100).toFixed(1)}%).`):T('Utabiri hauaminiki kwa sasa. Hatutoi ushauri.','The forecast is not reliable right now. No advice given.')}
+ if(['HALI','WEATHER'].includes(w)&&r>=0){const x=wxSum(r);return T(`Hali ya hewa ${REG[r]}: mvua mm ${x.rain} wiki hii, joto ${x.t}°C.`,`Weather in ${REG[r]}: ${x.rain} mm of rain this week, ${x.t}°C.`)}
+ return T('Tuma: BEI MAHINDI MOROGORO | UTABIRI NYANYA TANGA | SOKO MAHINDI | HALI MBEYA','Send: PRICE MAIZE MOROGORO | FORECAST TOMATOES TANGA | MARKET MAIZE | WEATHER MBEYA')}
+function send(t){t=t.trim();if(!t)return;const p=$('sms');p.insertAdjacentHTML('beforeend','<div class="msg me"></div><div class="msg bot"></div>');
  const m=p.querySelectorAll('.msg');m[m.length-2].textContent=t;m[m.length-1].textContent=reply(t);p.scrollTop=p.scrollHeight}
-function wxSum(r){const g=rng(77+r*13);let tot=0;for(let i=0;i<7;i++){tot+=Math.max(0,Math.round((g()-.45)*30));g()}return{rain:tot,t:TEMP[r]}}
-/* USSD session engine: *150*77# */
-const MENU='Karibu Dira\n1 Bei za leo\n2 Utabiri siku 14\n3 Soko bora\n4 Hali ya hewa\n0 Toka';
-const listC=()=>'Chagua zao:\n'+CR.map((n,i)=>(i+1)+' '+n[0]).join('\n')+'\n0 Menyu';
-const listR=()=>'Chagua mkoa:\n'+REG.map((n,i)=>(i+1)+' '+n).join('\n')+'\n0 Menyu';
-const BYE='Asante kwa kutumia Dira.';
+const MENU=()=>T('Karibu Dira\n1 Bei za leo\n2 Utabiri siku 14\n3 Soko bora\n4 Hali ya hewa\n0 Toka','Welcome to Dira\n1 Today’s prices\n2 14-day forecast\n3 Best market\n4 Weather\n0 Exit');
+const listC=()=>T('Chagua zao:','Choose crop:')+'\n'+CR.map((n,i)=>(i+1)+' '+cn(i)).join('\n')+'\n0 '+T('Menyu','Menu');
+const listR=()=>T('Chagua mkoa:','Choose region:')+'\n'+REG.map((n,i)=>(i+1)+' '+n).join('\n')+'\n0 '+T('Menyu','Menu');
+const BAD=()=>T('Chaguo si sahihi.\n','Invalid choice.\n'),BYE=()=>T('Asante kwa kutumia Dira.','Thank you for using Dira.');
 function ussdStep(v){v=v.trim();
- if(!us){if(v==='*150*77#'){us={s:'m'};return MENU}return 'Namba haijatambulika. Piga *150*77#'}
- if(us.s==='m'){if(v==='0'){us=null;return BYE}if(/^[1-4]$/.test(v)){us={s:v==='4'?'r':'c',k:v};return v==='4'?listR():listC()}return 'Chaguo si sahihi.\n'+MENU}
- if(v==='0'){us={s:'m'};return MENU}
- const n=+v-1;
- if(us.s==='c'){if(!(n>=0&&n<CR.length))return 'Chaguo si sahihi.\n'+listC();us.c=n;if(us.k==='3'){us.s='x';return reply('SOKO '+CR[n][0])+'\n0 Menyu'}us.s='r';return listR()}
- if(us.s==='r'){if(!(n>=0&&n<REG.length))return 'Chaguo si sahihi.\n'+listR();us.s='x';const k=us.k;return (k==='4'?reply('HALI '+REG[n]):reply((k==='1'?'BEI ':'UTABIRI ')+CR[us.c][0]+' '+REG[n]))+'\n0 Menyu'}
- us={s:'m'};return MENU}
+ if(!us){if(v===DIAL){us={s:'m'};return MENU()}return T('Namba haijatambulika. Piga ','Unknown number. Dial ')+DIAL}
+ if(us.s==='m'){if(v==='0'){us=null;return BYE()}if(/^[1-4]$/.test(v)){us={s:v==='4'?'r':'c',k:v};return v==='4'?listR():listC()}return BAD()+MENU()}
+ if(v==='0'){us={s:'m'};return MENU()}
+ const n=+v-1,menu='\n0 '+T('Menyu','Menu');
+ if(us.s==='c'){if(!(n>=0&&n<CR.length))return BAD()+listC();us.c=n;if(us.k==='3'){us.s='x';return reply('SOKO '+CR[n][0])+menu}us.s='r';return listR()}
+ if(us.s==='r'){if(!(n>=0&&n<REG.length))return BAD()+listR();us.s='x';const k=us.k;return (k==='4'?reply('HALI '+REG[n]):reply((k==='1'?'BEI ':'UTABIRI ')+CR[us.c][0]+' '+REG[n]))+menu}
+ us={s:'m'};return MENU()}
 function show(t){$('sms').innerHTML='<div class="ussd"></div>';$('sms').firstChild.textContent=t}
 function submitPhone(v){if(mode==='ussd')show(ussdStep(v));else send(v)}
 function setMode(m){mode=m;us=null;$('tU').setAttribute('aria-pressed',m==='ussd');$('tS').setAttribute('aria-pressed',m==='sms');
- $('q').placeholder=m==='ussd'?'*150*77#':'BEI MAHINDI MOROGORO';
- $('qc').innerHTML=(m==='ussd'?['*150*77#']:['BEI MAHINDI MOROGORO','UTABIRI NYANYA TANGA','SOKO MAHINDI','HALI MBEYA']).map(x=>`<button class="chip" data-q="${x}">${x}</button>`).join('');
- if(m==='ussd')show('Piga *150*77# kisha bonyeza Tuma.\n\nDial *150*77# then press Send.');else{$('sms').innerHTML='';send('BEI MAHINDI MOROGORO')}}
+ $('q').placeholder=m==='ussd'?DIAL:T('BEI MAHINDI MOROGORO','PRICE MAIZE MOROGORO');
+ const ex=lang==='sw'?['BEI MAHINDI MOROGORO','UTABIRI NYANYA TANGA','SOKO MAHINDI','HALI MBEYA']:['PRICE MAIZE MOROGORO','FORECAST TOMATOES TANGA','MARKET MAIZE','WEATHER MBEYA'];
+ $('qc').innerHTML=(m==='ussd'?[DIAL]:ex).map(x=>`<button class="chip" data-q="${x}">${x}</button>`).join('');
+ if(m==='ussd')show(T(`Piga ${DIAL} kisha bonyeza Tuma.`,`Dial ${DIAL} then press Send.`));else{$('sms').innerHTML='';send(ex[0])}}
 $('tU').onclick=()=>setMode('ussd');$('tS').onclick=()=>setMode('sms');
-$('kp').innerHTML=['1','2','3','4','5','6','7','8','9','*','0','#'].map(k=>`<button type="button" data-k="${k}">${k}</button>`).join('')+'<button type="button" data-k="del" aria-label="Delete">⌫ Delete</button>';
+$('kp').innerHTML=['1','2','3','4','5','6','7','8','9','*','0','#'].map(k=>`<button type="button" data-k="${k}">${k}</button>`).join('')+'<button type="button" data-k="del" id="kd"></button>';
 $('kp').onclick=e=>{const k=e.target.dataset.k;if(!k)return;$('q').value=k==='del'?$('q').value.slice(0,-1):$('q').value+k;$('q').focus()};
 $('f').onsubmit=e=>{e.preventDefault();const v=$('q').value;$('q').value='';if(v.trim())submitPhone(v)};
-/* Offline simulation: USSD and SMS use the mobile network, not data */
-function setNet(off){document.body.classList.toggle('offline',off);$('nb').setAttribute('aria-pressed',off);$('nb').textContent=off?'Back online':'Simulate no internet';$('offnote').hidden=!off}
+function setNet(off){document.body.classList.toggle('offline',off);$('nb').setAttribute('aria-pressed',off);$('nb').textContent=off?T('Rudisha intaneti','Back online'):T('Zima intaneti (jaribio)','Simulate no internet');$('offnote').hidden=!off;$('kd').textContent='⌫ '+T('Futa','Delete')}
 $('nb').onclick=()=>setNet(!document.body.classList.contains('offline'));
 addEventListener('offline',()=>setNet(true));addEventListener('online',()=>setNet(false));
-if(!navigator.onLine)setNet(true);
-/* Chart hover and income calculator */
-function tip(e){const R=$('chart').getBoundingClientRect(),tot=SHOW+H-1,i=Math.round(((e.clientX-R.left)/R.width*720-48)/(662/tot));if(i<0||i>tot)return;const v=i<SHOW?cur.s.slice(-SHOW)[i]:(cur.ok?cur.fc[i-SHOW]:null);$('tip').textContent=v==null?dayLbl(i-SHOW+1)+': no forecast':`${dayLbl(i-SHOW+1)}${i>=SHOW?' (forecast)':''}: TSh ${fmt(v)} per kg`}
+function tip(e){const R=$('chart').getBoundingClientRect(),tot=SHOW+H-1,i=Math.round(((e.clientX-R.left)/R.width*720-48)/(662/tot));if(i<0||i>tot)return;const v=i<SHOW?cur.s.slice(-SHOW)[i]:(cur.ok?cur.fc[i-SHOW]:null);$('tip').textContent=v==null?dayLbl(i-SHOW+1)+': '+T('hakuna utabiri','no forecast'):`${dayLbl(i-SHOW+1)}${i>=SHOW?T(' (utabiri)',' (forecast)'):''}: TSh ${fmt(v)} ${T('kwa kilo','per kg')}`}
 $('chart').addEventListener('pointermove',tip);$('chart').addEventListener('pointerdown',tip);
-function updateInc(){const kg=+$('kg').value;$('kgv').textContent=fmt(kg);const now=kg*cur.last;$('inc').textContent=cur.ok?`Sell today: TSh ${fmt(now)}. Sell on ${dayLbl(H)}: about TSh ${fmt(kg*cur.end)} (${cur.end>=cur.last?'+':'−'}TSh ${fmt(Math.abs(kg*cur.end-now))}).`:`Sell today: TSh ${fmt(now)}. No reliable forecast for this crop right now.`}
+function updateInc(){const kg=+$('kg').value,now=kg*cur.last,df=kg*cur.end-now;$('kl').innerHTML=`${T('Mavuno yako','Your harvest')}: <b>${fmt(kg)}</b> kg`;
+ $('inc').textContent=cur.ok?T(`Ukiuza leo: TSh ${fmt(now)}. Ukiuza ${dayLbl(H)}: takriban TSh ${fmt(kg*cur.end)} (${df>=0?'+':MINUS}TSh ${fmt(Math.abs(df))}).`,`Sell today: TSh ${fmt(now)}. Sell on ${dayLbl(H)}: about TSh ${fmt(kg*cur.end)} (${df>=0?'+':MINUS}TSh ${fmt(Math.abs(df))}).`):T(`Ukiuza leo: TSh ${fmt(now)}. Hakuna utabiri wa kuaminika kwa sasa.`,`Sell today: TSh ${fmt(now)}. No reliable forecast right now.`)}
 $('kg').oninput=updateInc;
 try{const s=localStorage.getItem('dira');if(s)[ri,ci]=s.split(',').map(Number)}catch(e){}
 if(!(ri>=0&&ri<REG.length&&ci>=0&&ci<CR.length)){ri=0;ci=0}
-render();setMode('ussd');
+if(!['sw','en'].includes(lang))lang='sw';
+if(!navigator.onLine)document.body.classList.add('offline');
+applyLang();
 if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script>
 </body>
